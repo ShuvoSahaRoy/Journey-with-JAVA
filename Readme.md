@@ -1,1 +1,1 @@
-This folder contained my history of java learning in 2018
+This folder contained my history of java learning from 2018
