@@ -1,0 +1,73 @@
+
+//invoice class
+import java.util.Scanner;
+class invoice{
+public String name;
+public String description;
+public int item_number;
+public double price;
+//invoice constractor
+invoice(){
+	name="";
+	description="";
+	item_number=0;
+	price=0.00;
+	
+	
+	
+}
+//set method
+void set(){
+Scanner input=new Scanner(System.in);
+
+	System.out.println("Name of the Company: ");
+	name=input.nextLine();
+	System.out.println("Types of the company: ");
+	description=input.nextLine();
+	System.out.println("Amount of item:");
+	item_number=input.nextInt();
+	System.out.println("Price of item: ");
+	price=input.nextDouble();
+	
+	
+}
+
+void get(){
+	System.out.println("Your company name is:"+name);
+	System.out.println("Your company is type of :"+description);
+	System.out.println("Your item amount: "+item_number);
+	System.out.println("Price of each item: "+price);
+	
+	
+	
+	
+}
+void getInvoiceAmmount(){
+	double total=item_number*price;
+	if(price>0)
+		System.out.println("Total price is :"+total);
+if(price<=0)
+	System.out.println("Price is "+0.00);
+}
+
+
+}
+
+
+	
+ 
+ 
+ 
+
+public class no2 {
+	public static void main(String arg[]){
+		invoice oikoi=new invoice();
+		oikoi.set();
+		oikoi.get();
+		oikoi.getInvoiceAmmount();
+		
+	}
+
+}
+
+

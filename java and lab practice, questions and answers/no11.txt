@@ -1,0 +1,66 @@
+(Perfect Numbers) An integer number is said to be a perfect number if its factors,
+ including
+1 (but not the number itself), sum to the number. For example, 6 is a perfect number,
+ because 6 = 1 + 2 + 3. 
+Write a program that includes a method isPerfect that determines if parameter number 
+is a perfect number. Use this method to display all the perfect numbers between 1 and 1000. Display the factors of each perfect number to confirm that the number is indeed perfect. 
+
+
+solution:
+
+
+import java.util.Scanner;
+
+class perfect{
+int a,b,n;
+int sum=0;
+public void isperfect(){
+	Scanner input=new Scanner(System.in);
+System.out.println();
+int sum=0;
+System.out.println("Enter an Integer number: ");
+n=input.nextInt();
+
+System.out.println("perfect values are: ");
+	for (int i=1;i<n;i++){
+	
+	
+		if(n%i==0){
+			sum+=i;
+			
+			System.out.println(i);
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+	if(sum==n){
+		System.out.println("number is perfect ");
+		
+	
+	
+	}
+	else System.out.println("number is not perfect ");
+	
+	
+}
+	
+	
+	
+	
+	
+}
+public class per11 {
+public static void main(String arg[]){
+	perfect ab=new perfect();
+	ab.isperfect();
+}
+}
