@@ -1,0 +1,77 @@
+
+Credit Limit Calculator) Write a program that determines whether any of several department-store customers has exceeded the credit limit on a charge account. For each customer, the following facts are available:
+a) account number
+b) balance at the beginning of the month
+c) total of all items charged by the customer this month
+d) total of all credits applied to the customer’s account this month
+e) allowed credit limit.
+The program should input all these facts as integers, calculate the new balance (= beginning balance + charges – credits), display the new balance and determine whether the new balance exceeds the customer’s credit limit. For those customers whose credit limit is exceeded, the program should display the message "Credit limit exceeded".
+
+
+
+solution:
+
+
+import java.util.Scanner;
+class custommeraccount{
+	public int ac_no;
+	public int bigining_balanc;
+	public int total_charge;
+	public int credit_apply;
+	public int new_balance;
+	custommeraccount(){
+		Scanner indata=new Scanner(System.in);
+		System.out.println("Enter your acount No: ");
+		ac_no=indata.nextInt();
+		System.out.println("Enter begining balance :");
+		bigining_balanc=indata.nextInt();
+		System.out.println("Enter total charge:");
+		total_charge=indata.nextInt();
+		System.out.println("Enter how much credit applies: ");
+		credit_apply=indata.nextInt();
+		
+		
+		
+		
+	}
+	void show(){
+		System.out.println("Accoutn no is: "+ac_no);
+		System.out.println("Beggining balance is : "+bigining_balanc);
+		System.out.println("Total charge is : " +total_charge);
+		System.out.println("Total credit applies: "+credit_apply);
+		
+	}
+	int newbalance(){
+		
+		new_balance=(bigining_balanc+total_charge-credit_apply);
+		return new_balance;
+		
+		
+		
+	}
+	void show_newbalance(){
+		System.out.println("your new balance is: "+new_balance);
+		if (new_balance==0)
+			System.out.println("your Balance is Zero");
+		if(new_balance<0)
+			System.out.println("Yout credit balance limit exceedited");
+		
+		
+		
+	}
+	
+	
+	
+	
+}
+public class no5 {
+	public static void main(String arg[]){
+		custommeraccount oikoi=new custommeraccount();
+		oikoi.show();
+		oikoi.newbalance();
+		oikoi.show_newbalance();
+		
+		
+	}
+
+}

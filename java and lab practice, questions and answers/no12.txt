@@ -1,0 +1,71 @@
+
+(Rectangle Class) Create a class Rectangle with attributes length and width, 
+each of which defaults to 1. Provide methods that calculate the rectangle’s perimeter 
+and area. It has set and get methods for both length and width. The set methods should 
+
+solution:
+
+
+import java.util.Scanner;
+
+class rectangle{
+	 public float width=1;
+     private float length=1;
+ void get(){
+		Scanner indata=new Scanner(System.in);
+		
+		System.out.println("Enter width:");
+		
+		width=indata.nextFloat();
+		System.out.println("Enter length: ");
+		length=indata.nextFloat();
+		
+	}
+	
+	void set(){
+		if (width>0&&width<20){
+			System.out.println("Width is : "+width);
+		
+			
+		}else System.out.println("error!! please enter input between 00 to 20 ");
+		
+		if (length>0&&length<20){
+			System.out.println("length is : "+length);
+		
+		
+	
+	}else System.out.println("error!! please enter input between 00 to 20");
+		
+		if (width>0&&width<20){
+			if(length>0&&length<20){
+			System.out.println("perimetter is  : "+(2*(width+length)));
+			}
+			
+		}
+		
+		if (width>0&&width<20){
+			if(length>0&&length<20){
+			System.out.println("Area is  : "+(width+length));
+			}
+			
+		}
+		
+}
+	
+	
+
+
+	
+	
+}
+public class noofthe12 {
+	public static void main(String arg[]){
+		
+	rectangle rec=new rectangle ();
+	rec.get();
+	rec.set();
+	
+		
+	}
+
+}

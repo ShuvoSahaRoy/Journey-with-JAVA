@@ -1,0 +1,69 @@
+(Sales Commission Calculator) A large company pays its salespeople on a commission basis. 
+The salespeople receive $200 per week plus 9% of their gross sales for that week. 
+For example, a salesperson who sells $5000 worth of merchandise in a week receives $200
+ plus 9% of $5000, or a total of $650. You’ve been supplied with a list of the items sold 
+by each salesperson. The values of these items are as follows:
+Item     Value
+1           239.99
+2           129.75
+3           99.95
+4         350.89
+Write a program that inputs one salesperson’s items sold for last week and calculates and 
+displays that salesperson’s earnings. There’s no limit to the number of items that can be 
+sold.
+
+
+
+
+
+Solution:
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+class arif1{
+	float a;
+	int n;
+	public void salespeople(){
+		Scanner input =new Scanner (System.in);
+		float sum = 0;
+		System.out.println("How many product you want to sold ? :");
+n=input.nextInt();
+float a[]=new float[50];
+		System.out.println("Enter prices of thats products: ");
+		for(int i=0;i<n;i++){
+			a[i]=input.nextFloat();
+			
+		
+			
+			
+		}
+		System.out.println("Total prices are: ");
+		for(int i=0;i<n;i++){
+			sum=sum+a[i];
+			
+			
+		}
+		
+		System.out.println(sum);
+		float account;
+	account=((sum*9)/100)+200;
+	System.out.println("Earnings of this weak is "+"$" +account);
+	
+	}
+	
+	
+	
+}
+public class no6 {
+	public static void main(String arg[]){
+		arif1 oikoi=new arif1();
+		oikoi.salespeople();
+	}
+
+}

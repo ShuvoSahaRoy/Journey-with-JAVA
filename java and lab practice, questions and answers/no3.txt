@@ -1,0 +1,87 @@
+Create a class called Employee that includes three instance variables—a first name 
+(type String), a last name (type String) and a monthly salary (double). Provide a 
+constructor that initializes the three instance variables. Provide a set and a get
+ method for each instance variable. If the monthly salary is not positive, set it 
+to 0.0. Write a program named EmployeeTest that demonstrates class Employee’s 
+capabilities. Create two Employee objects and display each object’s yearly salary.
+ Then give each Employee a 10% raise and display each Employee’s yearly salary again.
+
+
+
+
+
+
+
+
+
+
+solution:
+
+
+
+import java.util.Scanner;
+
+class employee{
+private String firstname;
+ private String lastname;
+	double monthly_salary;
+	employee(){
+		
+		firstname="";
+		lastname="";
+		monthly_salary=0.00;
+		
+		
+	}
+	
+	public void set(){
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter your first name:");
+		
+		
+		firstname=input.nextLine();
+		System.out.println("Enter your Last name: ");
+		lastname=input.nextLine();
+		System.out.println("Enter your monthly salary: ");
+		monthly_salary=input.nextDouble();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	public void get(){
+		System.out.println("Your first name is: "+firstname);
+		System.out.println("Your last name is : "+lastname);
+		System.out.println("");
+		if(monthly_salary>0){
+		System.out.println("Your monthly salary is:"+ monthly_salary );
+		}
+		else System.out.println("Your monthly salary is: 0.00");
+	}
+	
+}
+public class no3 {
+public static void main(String arg[]){
+	
+	employee emp=new employee();
+
+	emp.set();
+	emp.get();
+	
+
+	double ys=emp.monthly_salary*12;
+	System.out.println("yearly salary is:"+ys);
+	double yes=(emp.monthly_salary*12+((ys*10)/100));//   (ys+(ys*10)/100) korle o hobe.
+	System.out.println("Encreasing yearly salary is: "+yes);
+	
+
+	
+	
+}
+}
